@@ -1,0 +1,20 @@
+@if (config.type === 'select') {
+    <div class="form-field">
+        <label [for]="config.label"> {{ config.label }}: </label>
+
+        <select [name]="config.label" (change)="handleChange($event)">
+            @for (option of config.options; track option ) {
+                @if (!!option.display) {
+                    <option [value]="option.value">{{ option.label }} </option>
+                }
+            }
+        </select>
+    </div>
+}
+
+@if (config.type === 'text') {
+    <div class="form-field">
+        <label [for]="config.label"> {{ config.label }}: </label><br>
+        <input type="text" [name]="config.label" (keyup)="handleChange($event)">
+    </div>
+}

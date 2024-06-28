@@ -1,0 +1,27 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "type": "select",
+            "label": "Select Course",
+            "options": [
+                "javascript",
+                "java"
+            ]
+        },
+        {
+            "id": "2",
+            "type": "select",
+            "label": "Select Framework",
+            "options": {
+                "java": ["Maven", "SpringBoot", "Apache"],
+                "javascript": ["Vue", "Angular", "React"]
+            }
+        },
+        {
+            "id": "3",
+            "type": "text",
+            "label": "First Name"
+        }
+    ]
+}
